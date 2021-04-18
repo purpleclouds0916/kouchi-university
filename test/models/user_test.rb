@@ -2,13 +2,13 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
+#  id              :bigint           not null, primary key
 #  admin           :boolean          default(FALSE)
-#  email           :string
-#  name            :string
-#  password_digest :string
-#  remember_digest :string
-#  reset_digest    :string
+#  email           :string(255)
+#  name            :string(255)
+#  password_digest :string(255)
+#  remember_digest :string(255)
+#  reset_digest    :string(255)
 #  reset_sent_at   :datetime
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
