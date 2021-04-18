@@ -13,8 +13,8 @@ gem 'image_processing',           '1.9.3'
 gem 'mini_magick', '~> 4.8'
 # リッチエディタ
 gem 'actiontext'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.4'
+# Use mysql2 as the database for Active Record
+# gem 'mysql2', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -42,7 +42,7 @@ gem 'aws-sdk-s3',              '1.46.0', require: false
 # Migrate data from development environment to production
 gem 'seed_dump'
 
-# gem 'mysql2'
+gem 'mysql2', '>= 0.4.4'
 gem 'rails-controller-testing'
 
 gem 'dotenv-rails'
@@ -59,8 +59,8 @@ gem 'pry-rails', :group => :development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-    #sqlite3 gemが本番環境に導入されないようにする
-  gem 'sqlite3', '1.4.1'
+    #mysql2 gemが本番環境に導入されないようにする
+  # gem 'mysql2', '1.4.1'
 end
 
 group :development do
@@ -81,8 +81,8 @@ group :test do
 end
 
 group :production do
-  #本番（production）環境にpg gemをインストールしてRailsがPostgreSQLと通信できるようにする
-  gem 'pg'
+  #本番（production）環境にmysql2 gemをインストールしてRailsがPostgreSQLと通信できるようにする
+  # gem 'mysql2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

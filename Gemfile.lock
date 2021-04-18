@@ -145,11 +145,11 @@ GEM
     mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
+    mysql2 (0.5.3)
     nio4r (2.5.5)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -232,7 +232,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.1)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -278,7 +277,7 @@ DEPENDENCIES
   kaminari
   listen (~> 3.2)
   mini_magick (~> 4.8)
-  pg
+  mysql2 (>= 0.4.4)
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.3)
@@ -289,7 +288,6 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (= 1.4.1)
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
