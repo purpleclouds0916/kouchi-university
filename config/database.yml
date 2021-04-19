@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: sample_app_production
-  username: sample_app
+  database: kouchi-university-test
+  username: root
   password: <%= ENV['KOCHIUNIVERSITYFORESTSCIENCEFIELD_DATABASE_PASSWORD'] %>
