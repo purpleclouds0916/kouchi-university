@@ -79,10 +79,8 @@ class User < ApplicationRecord
         reset_sent_at < 2.hours.ago
     end
 
-    def self.guest
-        find_or_create_by!(name: 'guset', email: 'guest@example.com') do |user|
-            user.password_digest = SecureRandom.urlsafe_base64
-        end
+    def feed
+        Micropost.where("user_id = ?", id)
     end
 
     private

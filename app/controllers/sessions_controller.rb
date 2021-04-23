@@ -18,11 +18,4 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
-
-  def new_guest
-    user = User.guest
-    log_in user
-    flash[:success] = "ゲストユーザーとしてログインしました"
-    redirect_to posts_path
-  end
 end
