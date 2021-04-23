@@ -5,15 +5,15 @@ User.create!(name:  "Example User",
              admin: true)
 
 # 追加のユーザーをまとめて生成する
-12.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@test.org"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
-end
+# 12.times do |n|
+#   name  = Faker::Name.name
+#   email = "example-#{n+1}@test.org"
+#   password = "password"
+#   User.create!(name:  name,
+#                email: email,
+#                password:              password,
+#                password_confirmation: password)
+# end
 
 Tag.create([
   { name: 'スライダー' },
@@ -26,39 +26,39 @@ Tag.create([
   { name: '先生の紹介動画' }
 ])
 
-users = User.order(:created_at).take(6)
-filenames = Dir.open("db/fixtures/",&:to_a)
-10.times do
-  users.each do |user|
-    name  = Faker::Name.name
-    birthplace = Faker::Address.city
-    job = Faker::Company.name
-    sentence1 = Faker::Lorem.sentence(word_count: 2)
-    sentence2 = Faker::Lorem.sentence(word_count: 3)
-    sentence3 = Faker::Lorem.sentence(word_count: 8)
-    sentence4 = Faker::Lorem.sentence(word_count: 100)
-    sentence5 = Faker::Lorem.sentence(word_count: 100)
-    sentence6 = Faker::Lorem.sentence(word_count: 100)
-    sentence7 = Faker::Lorem.sentence(word_count: 100)
-    sentence8 = Faker::Lorem.sentence(word_count: 100)
-    filename = filenames[4..69].shuffle.first
- file_path = "db/fixtures/#{filename}"
+# users = User.order(:created_at).take(6)
+# filenames = Dir.open("db/fixtures/",&:to_a)
+# 10.times do
+#   users.each do |user|
+#     name  = Faker::Name.name
+#     birthplace = Faker::Address.city
+#     job = Faker::Company.name
+#     sentence1 = Faker::Lorem.sentence(word_count: 2)
+#     sentence2 = Faker::Lorem.sentence(word_count: 3)
+#     sentence3 = Faker::Lorem.sentence(word_count: 8)
+#     sentence4 = Faker::Lorem.sentence(word_count: 100)
+#     sentence5 = Faker::Lorem.sentence(word_count: 100)
+#     sentence6 = Faker::Lorem.sentence(word_count: 100)
+#     sentence7 = Faker::Lorem.sentence(word_count: 100)
+#     sentence8 = Faker::Lorem.sentence(word_count: 100)
+#     filename = filenames[4..69].shuffle.first
+#  file_path = "db/fixtures/#{filename}"
 
-#  post = user.posts.create!(tag_id: '6')
-#  post.build_alumni(name:name, birthplace: birthplace, job:job, research_field:sentence1, research_office:sentence2,
-#    reason:sentence4, learning:sentence5, job_description: sentence6, memories:sentence7, original_title:sentence3, original_content:sentence8 )
-#  post.images.attach(io: File.open("#{file_path}"),
-#  filename: "fixtures/#{filename}")
+# #  post = user.posts.create!(tag_id: '6')
+# #  post.build_alumni(name:name, birthplace: birthplace, job:job, research_field:sentence1, research_office:sentence2,
+# #    reason:sentence4, learning:sentence5, job_description: sentence6, memories:sentence7, original_title:sentence3, original_content:sentence8 )
+# #  post.images.attach(io: File.open("#{file_path}"),
+# #  filename: "fixtures/#{filename}")
     
-    post = user.posts.new(tag_id: '6')
-    post.build_alumni(name:name, birthplace: birthplace, job:job, research_field:sentence1, research_office:sentence2,
-      reason:sentence4, learning:sentence5, job_description: sentence6, memories:sentence7, original_title:sentence3, original_content:sentence8 ).save
-    post.images.attach(io: File.open("#{file_path}"),
-    filename: "fixtures/#{filename}")
-    post.save
-  end
+#     post = user.posts.new(tag_id: '6')
+#     post.build_alumni(name:name, birthplace: birthplace, job:job, research_field:sentence1, research_office:sentence2,
+#       reason:sentence4, learning:sentence5, job_description: sentence6, memories:sentence7, original_title:sentence3, original_content:sentence8 ).save
+#     post.images.attach(io: File.open("#{file_path}"),
+#     filename: "fixtures/#{filename}")
+#     post.save
+#   end
 
-end
+# end
 
 # Post.create {[
 #     {title: nil, content: "技術者として「基本測量（すべての測量の基礎となる測量）」、「公共測量（国又は地方公共団体の実施する測量）」に従事するために必要な国家資格です。 測量士は、「測量に関する計画を作製し、又は実施する者」、 測量士補は、「測量士の作製した計画に従い、測量に従事する者」を指します。測量士補の資格取得後、1年以上の実務経験により測量士に昇格が可能です。", user_id: 1, birthplace: nil, job: nil, research_office: nil, research_field: nil, name: "測量士補", reason: nil, learning: nil, job_description: nil, memories: nil, original_title: nil, original_content: nil, video_url: nil, external_url: "https://www.gsi.go.jp/LAW/SHIKEN-sikentoroku.html", teacher_url: nil, url_references: "測量士及び測量士補登録に関する案内 | 国土地理院", lead: nil, tag_id: 7},
