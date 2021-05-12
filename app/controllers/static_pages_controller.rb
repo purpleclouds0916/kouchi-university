@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
-    #すでに公開しているので、ログイン制限。実際は削除↓
-    before_action :logged_in_user
+    
   def home
     @swipers =  Tag.find(1).posts.limit(3)
     @meanings = Tag.find(2).posts.limit(3)

@@ -1,6 +1,5 @@
 class InquiryController < ApplicationController
-    #すでに公開しているので、ログイン制限。実際は削除↓
-    before_action :logged_in_user
+   
   def index
     # 入力画面を表示
     @inquiry = Inquiry.new
