@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: <%= ENV['DATABASE_SOCKET'] %>
 
 development:
   <<: *default
@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: kouchi-university-test
-  username: root
-  password: 
-  socket: /var/lib/mysql/mysql.sock
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: <%= ENV['DATABASE_SOCKET'] %>
