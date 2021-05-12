@@ -1,7 +1,6 @@
 <% provide(:title, "管理者トップ") %>
 
   <div class="inner">
-    <div class="greet"><%= current_user.name %>さん こんにちは!</div>
-     <div class="greet"><a href="http://www.kochi-u.ac.jp/agrimar-skg/index.html" target="_blank" rel="noopener noreferrer">実際に公開しているサイトを見る（html形式）</a></div>
+    <div class="greet"><%= current_user.name %>さん こんにちは!</div> 
   </div>
 <%= render 'layouts/management_table',  object: @posts %>
