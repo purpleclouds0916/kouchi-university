@@ -4,11 +4,11 @@
 #
 #  id              :bigint           not null, primary key
 #  admin           :boolean          default(FALSE)
-#  email           :string(255)
-#  name            :string(255)
-#  password_digest :string(255)
-#  remember_digest :string(255)
-#  reset_digest    :string(255)
+#  email           :string(191)
+#  name            :string(191)
+#  password_digest :string(191)
+#  remember_digest :string(191)
+#  reset_digest    :string(191)
 #  reset_sent_at   :datetime
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null

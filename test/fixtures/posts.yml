@@ -4,8 +4,8 @@
 #
 #  id         :bigint           not null, primary key
 #  content    :text(65535)
-#  lead       :string(255)
-#  title      :string(255)
+#  lead       :string(191)
+#  title      :string(191)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  tag_id     :integer
