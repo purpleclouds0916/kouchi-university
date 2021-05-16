@@ -6,10 +6,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-　	<!--fontawesome-->
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    　	<!--fontawesome-->
 <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 	  <script src="https://kit.fontawesome.com/c93c1bab3a.js" crossorigin="anonymous"></script>
-	  <%= stylesheet_link_tag params[:controller] %>
+          <%= stylesheet_link_tag params[:controller] %>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'main' %>
   
