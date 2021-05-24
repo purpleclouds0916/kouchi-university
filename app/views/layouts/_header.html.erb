@@ -4,7 +4,7 @@
 	   || controller.controller_name == "sessions" && controller.action_name == "create" %>
 <header class="header">
 	<div class="inner header__inner">
-		<h1 class="header__logo"><%= image_tag "logo.png", :alt => '高知大学森林科学領域ホームページ' %></h1><!-- /.header__logo -->
+		<h1 class="header__logo"><%= link_to root_path do %><%= image_tag "logo.png", :alt => '高知大学森林科学領域ホームページ' %><% end %></h1><!-- /.header__logo -->
 		<nav class="header__nav">
 			<%= render 'layouts/nav' %>
 		</nav><!-- /.header__nav -->
