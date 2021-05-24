@@ -67,7 +67,7 @@
 				<div class="course__video content__video">
 					<h3 class="video__title">森林科学領域の紹介動画</h3>
 					<div class="video__img" id="btn_modal_1" href="">
-						<a class="alumni__media posts__alumni__media" href="<%= @about[0].url.first.movie_url %>">
+						<a class="" href="<%= @about[0].url.first.movie_url %>">
 							<%= image_tag  @about[0].images.first %>
 						</a><!-- /.alumni__media -->	
 					</div><!-- /.video__img -->
@@ -112,9 +112,9 @@
 				<div class="lesson__video content__video">
 					<h3 class="video__title">授業の紹介動画</h3>
 					<div class="video__img">
-						<a class="alumni__media posts__alumni__media" href="<%= @lessons[0].url.first.movie_url %>">
-							<%= image_tag  @lessons[0].images.first %>
-						</a><!-- /.alumni__media -->		
+						<a class="" href="<%= @lessons[0].url.first.movie_url %>">
+                                                  <%= image_tag  @lessons[0].images.first, :class=>"111"%>
+    						</a><!-- /.alumni__media -->		
 					</div><!-- ./video__img-->
 				</div><!-- ./lesson__video -->
 			</div><!-- ./lesson__item -->

@@ -222,6 +222,11 @@
 // 森林を学ぶ意義
 // -----
 
+.text__important {
+   	background:linear-gradient(transparent 60%, #ff6 60%);
+	 font-weight: 700;
+}
+
 .meaning{
 	background-color: #c1984d11;
 	line-height: (24 / 16);
@@ -325,6 +330,7 @@
 	}
 }
 
+
 .content__video {
 	.video__title {
 		font-weight: 700;
@@ -342,6 +348,12 @@
 		width: 530px;
 		height: 298.13px;
 		margin: 0 auto;
+		//display: flex;
+	        //justify-content: center;
+    		//display:flex;
+    		//justify-content:stretch;
+    		//align-items: center;
+		//position: relative;
 
 		@include mq('tab') {
 			width: 400px;
@@ -353,12 +365,18 @@
 			width: 290px;
 			height: 168.75px;
 			margin: 0 auto 50px;
+			//width: 100%;
+			//height: auto;
 		} 
 
 		img {
+			
+   			max-width: 100%;
+   			height: auto;
+   			 //display: block;
 			cursor: pointer;
-			transition:1s all;		
-
+			transition:1s all;
+				
 			&:hover {
 				opacity: 0.8;
 				transform:scale(1.2,1.2);
@@ -366,6 +384,10 @@
 			}
 		}
 	}
+}
+
+.alumni__media, .posts__alumni__media{
+	
 }
 
 //動画モーダル
@@ -602,6 +624,7 @@
 	background: #fff;
 	border-radius: 4px;
 	display: flex;
+	//align-items: flex-start;
 	text-decoration: none;
 	transition: all 0.15s ease 0s;
 	color: #6f7579;
