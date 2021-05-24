@@ -5,7 +5,7 @@
 #  id               :bigint           not null, primary key
 #  birthplace       :string(191)
 #  job              :string(191)
-#  job_description  :string(191)
+#  job_description  :text(65535)
 #  learning         :text(65535)
 #  memories         :text(65535)
 #  name             :string(191)
