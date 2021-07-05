@@ -84,7 +84,7 @@
 		<h2 class="section-title">先生の紹介</h2><!-- /.section-title -->
 		<div class="teacher__items">
 		<% @teacher.each do |teacher| %>
-		<% if teacher.url.present? %>
+		<% if teacher.url.first.teacher_hp_url.present? %>
 			<a class="teacher__item teacher__item__link" href="<%= teacher.url.first.teacher_hp_url%>">
 				<%= render 'layouts/teacher-media', object:teacher %>
 				<span class="see-details">研究室HP<i class="fas fa-arrow-right"></i></span>
